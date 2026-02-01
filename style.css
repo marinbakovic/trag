@@ -1,0 +1,268 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #111;
+    color: #eee;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: #caa35c;
+}
+
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #caa35c;
+    transition: 0.3s;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url("zagreb-silueta.jpg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    opacity: 0.85;
+}
+
+/* BUTTONS */
+.btn,
+.btn-social {
+    display: inline-block;
+    background: #caa35c;
+    color: #111;
+    padding: 14px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.btn-social:hover {
+    background: #e0b96e;
+}
+
+.btn-hero {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* PROJECTS / GRID */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.project-card {
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.07);
+}
+
+.project-card h3 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* ABOUT */
+.about h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    max-width: 750px;
+    margin-bottom: 22px;
+    opacity: 0.85;
+}
+
+/* JEDNAKE FOTKE U ONAMA */
+.equal-images img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #111;
+    padding: 10px;
+}
+
+/* CONTACT */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+}
+
+.contact-wrapper {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background: #222;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #caa35c;
+}
+
+/* FOOTER */
+footer {
+    padding: 50px 0;
+    text-align: center;
+    background: #111;
+}
+
+footer p {
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
